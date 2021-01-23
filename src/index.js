@@ -4,5 +4,29 @@ import './index.css';
 import App from './components/App/App';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// redux plus logger
+import {createStore, combineReducers, applyMiddleware } from 'redux';
+import { Provider } from 'react-redux';
+import logger from 'redux-logger';
+
+// reducers
+
+
+
+
+// store
+const storeInstance = createStore(
+    combineReducers({
+
+    }),
+    applyMiddleware(logger)
+);
+
+
+ReactDOM.render(
+    <Provider store={storeInstance}>
+        <App />
+    </Provider>, 
+    document.getElementById('root')
+);
 registerServiceWorker();

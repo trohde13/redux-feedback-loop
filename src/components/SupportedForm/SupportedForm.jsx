@@ -26,14 +26,14 @@ function SupportedForm() {
         <div>
             <h2>How well are you being supported?</h2>
             <form onSubmit={handleSupported}>
-                <select onChange={(event) => setSupport(event.target.value)}>
+                <select className="selectOpt" onChange={(event) => setSupport(event.target.value)}>
                     <option value="support">5</option>
                     <option value="support">4</option>
                     <option value="support">3</option>
                     <option value="support">2</option>
                     <option value="support">1</option>
                 </select>
-                <button type="submit">NEXT</button>
+                <button className="nextBtn" type="submit">NEXT</button>
             </form>
         </div>
     )

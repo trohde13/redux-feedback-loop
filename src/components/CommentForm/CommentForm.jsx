@@ -28,11 +28,12 @@ function CommentForm() {
             <form onSubmit={handleComment}>
                 <input
                     type="text"
+                    className="commentInput"
                     placeholder="Anything you want to add?"
                     value={comments}
                     onChange={(event) => setComments(event.target.value)}
                 ></input>
-                <button type="submit">NEXT</button>
+                <button className="nextBtn" type="submit">NEXT</button>
             </form>
         </div>
     )

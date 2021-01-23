@@ -38,7 +38,7 @@ function ReviewPage() {
                 <p>{ feedbackReducer.comments }</p>
                 
             </div>
-            <button onClick={handleSubmit}>CONFIRM FEEDBACK</button>
+            <button className="confirmBtn" onClick={handleSubmit}>CONFIRM FEEDBACK</button>
         </div>
     )
 };

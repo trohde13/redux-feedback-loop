@@ -12,7 +12,7 @@ function FeelingForm() {
     const handleFeeling = (event) => {
         event.preventDefault();
 
-        console.log('in handleFeeling');
+        console.log('in handleFeeling', {feeling} );
 
         dispatch({
             type: 'SET_FEEDBACK',
@@ -26,14 +26,16 @@ function FeelingForm() {
         <div>
             <h2>How are you feeling today?</h2>
             <form onSubmit={handleFeeling}>
-                <select onChange={(event) => setFeeling(event.target.value)}>
+                
+                <select className="selectOpt" onChange={(event) => setFeeling(event.target.value)}>
                     <option value="feeling">5</option>
                     <option value="feeling">4</option>
                     <option value="feeling">3</option>
                     <option value="feeling">2</option>
                     <option value="feeling">1</option>
                 </select>
-                <button type="submit">NEXT</button>
+                
+                <button className="nextBtn" type="submit">NEXT</button>
             </form>
         </div>
     )

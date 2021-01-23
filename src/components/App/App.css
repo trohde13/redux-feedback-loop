@@ -21,3 +21,27 @@
 h4 {
   font-style: italic;
 }
+
+.selectOpt {
+  width: 200px;
+  height: 25px;
+  margin: 10px;
+
+}
+
+.commentInput {
+  width: 400px;
+  height: 25px;
+  margin: 10px;
+
+}
+
+.nextBtn {
+  width: 75px;
+  height: 25px;
+}
+
+.confirmBtn {
+  height: 25px;
+
+}

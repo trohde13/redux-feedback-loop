@@ -26,14 +26,14 @@ function UnderstandingForm() {
         <div>
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={handleUnderstanding}>
-                <select onChange={(event) => setUnderstanding(event.target.value)}>
+                <select className="selectOpt" onChange={(event) => setUnderstanding(event.target.value)}>
                     <option value="understanding">5</option>
                     <option value="understanding">4</option>
                     <option value="understanding">3</option>
                     <option value="understanding">2</option>
                     <option value="understanding">1</option>
                 </select>
-                <button type="submit">NEXT</button>
+                <button className="nextBtn" type="submit">NEXT</button>
             </form>
         </div>
     )

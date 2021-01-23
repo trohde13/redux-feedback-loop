@@ -10,7 +10,23 @@ import { Provider } from 'react-redux';
 import logger from 'redux-logger';
 
 // reducers
+const feedbackReducer = (state = [], action) => {
+    switch (action.type) {
+        case 'SET_FEEDBACK':
+            return [...state, action.payload];
+        default:
+            return state;
+    }
+}; // end feedbackReducer
 
+const feelingReducer = (state = {}, action) => {
+    switch (action.type) {
+        case 'SET_FEELING':
+            return action.payload;
+        default:
+            return state;
+    }
+}; // end feedbackReducer
 
 
 

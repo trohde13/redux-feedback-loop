@@ -14,7 +14,7 @@ function CommentForm() {
 
         console.log('in handleComment');
 
-        dispatchEvent({
+        dispatch({
             type: 'SET_FEEDBACK',
             payload: {comments: comments}
         });
@@ -27,10 +27,10 @@ function CommentForm() {
             <h2>Any comments you want to leave?</h2>
             <form onSubmit={handleComment}>
                 <input
-                    required
+                    type="text"
                     placeholder="Anything you want to add?"
                     value={comments}
-                    onChange={(event) => setComment(event.target.value)}
+                    onChange={(event) => setComments(event.target.value)}
                 ></input>
                 <button type="submit">NEXT</button>
             </form>

@@ -16,13 +16,29 @@ function ReviewPage() {
 
     console.log('in the ReviewPage');
 
+    const handleSubmit = () => {
+        console.log('handleSubmit clicked!');
+        axios.post('/feedback', feedbackReducer)
+        .then((response) =>{
+            console.log('sending feedback', response);
+            history.push('/success');
+        }).catch(function (error) {
+            console.log('Error on Post:', error);
+        });
+    }; //end handleSubmit
+
     return (
         <div>
             <h2>REVIEW YOUR FEEDBACK:</h2>
-            <p>{ feedbackReducer.feeling }</p>
-            <p>{ feedbackReducer.understanding }</p>
-            <p>{ feedbackReducer.support }</p>
-            <p>{ feedbackReducer.comments }</p>
+            <div>
+                
+                <p>{ feedbackReducer.feeling }</p>
+                <p>{ feedbackReducer.understanding }</p>
+                <p>{ feedbackReducer.support }</p>
+                <p>{ feedbackReducer.comments }</p>
+                
+            </div>
+            <button onClick={handleSubmit}>CONFIRM FEEDBACK</button>
         </div>
     )
 };

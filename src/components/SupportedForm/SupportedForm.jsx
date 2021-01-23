@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 function SupportedForm() {
 
-    const [support, setSupport] = useState('');
+    const [support, setSupport] = useState();
     
     const history = useHistory();
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function SupportedForm() {
 
         console.log('in handleSupported');
 
-        dispatchEvent({
+        dispatch({
             type: 'SET_FEEDBACK',
             payload: {support: support}
         });

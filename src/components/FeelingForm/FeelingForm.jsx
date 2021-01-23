@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 function FeelingForm() {
 
-    const [feeling, setFeeling] = useState('');
+    const [feeling, setFeeling] = useState();
     
     const history = useHistory();
     const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function FeelingForm() {
 
         console.log('in handleFeeling');
 
-        dispatchEvent({
+        dispatch({
             type: 'SET_FEEDBACK',
             payload: {feeling: feeling}
         });

@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 function UnderstandingForm() {
 
-    const [understanding, setUnderstanding] = useState();
+    const [understanding, setUnderstanding] = useState('');
 
     const history = useHistory();
     const dispatch = useDispatch();

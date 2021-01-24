@@ -5,22 +5,22 @@
 **/
 
 const pg = require('pg');
-const url = require('url');
-let config = {};
+// const url = require('url');
+// let config = {};
 
 if (process.env.DATABASE_URL) {
     // Heroku gives a url, not a connection object
     // https://github.com/brianc/node-pg-pool
     let params = url.parse(process.env.DATABASE_URL);
-    let auth = params.auth.split(':');
+   let auth = params.auth.split(':');
 
-    config = {
+   config = {
         user: auth[0],
         password: auth[1],
         host: params.hostname,
         port: params.port,
         database: params.pathname.split('/')[1],
-        ssl: { rejectUnauthorized: false },
+         ssl: { rejectUnauthorized: false },
         max: 10, // max number of clients in the pool
         idleTimeoutMillis: 30000, // how long a client is allowed to remain idle before being closed
     };
@@ -39,3 +39,23 @@ if (process.env.DATABASE_URL) {
 }
 
 module.exports = new pg.Pool(config);
+
+// const config = {
+//     database: 'prime-feedback',
+//     host: 'localhost',
+//     port: 5432,
+//     max: 10,
+//     idleTimeoutMillis: 30000
+// };
+
+// const pool = new pg.Pool(config);
+
+// pool.on("connect", () => {
+//     console.log("connected to Postgres");
+// });
+
+// pool.on("error", (error) => {
+//     console.log("error connecting to Postgres", error);
+// });
+
+// module.exports = pool;

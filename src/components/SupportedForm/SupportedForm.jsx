@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 function SupportedForm() {
 
-    const [support, setSupport] = useState();
+    const [support, setSupport] = useState('');
     
     const history = useHistory();
     const dispatch = useDispatch();

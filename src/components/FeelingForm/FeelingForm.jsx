@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 
 function FeelingForm() {
 
-    const [feeling, setFeeling] = useState();
+    const [feeling, setFeeling] = useState('');
     
     const history = useHistory();
     const dispatch = useDispatch();

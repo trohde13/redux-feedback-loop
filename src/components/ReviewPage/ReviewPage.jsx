@@ -32,9 +32,9 @@ function ReviewPage() {
             <h2>REVIEW YOUR FEEDBACK:</h2>
             <div>
                 
-                <p>{ feedbackReducer.feeling }</p>
-                <p>{ feedbackReducer.understanding }</p>
-                <p>{ feedbackReducer.support }</p>
+                <p>Feelings: { feedbackReducer.feeling }</p>
+                <p>Conceptual Understanding: { feedbackReducer.understanding }</p>
+                <p>Support: { feedbackReducer.support }</p>
                 <p>{ feedbackReducer.comments }</p>
                 
             </div>

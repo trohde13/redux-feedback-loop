@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
+import Select from 'react-select';
 
 function FeelingForm() {
 
@@ -9,14 +10,22 @@ function FeelingForm() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    // const options = [
+    //     {value: 5, label: 5 },
+    //     {value: 4, label: 4 },
+    //     {value: 3, label: 3 },
+    //     {value: 2, label: 2 },
+    //     {value: 1, label: 1 },
+    // ]
+
     const handleFeeling = (event) => {
         event.preventDefault();
 
         console.log('in handleFeeling', {feeling} );
 
         dispatch({
-            type: 'SET_FEEDBACK',
-            payload: {feeling: feeling}
+            type: 'SET_FEELING',
+            payload: feeling
         });
 
         history.push('/understanding');
@@ -28,11 +37,11 @@ function FeelingForm() {
             <form onSubmit={handleFeeling}>
                 
                 <select className="selectOpt" onChange={(event) => setFeeling(event.target.value)}>
-                    <option value="feeling">5</option>
-                    <option value="feeling">4</option>
-                    <option value="feeling">3</option>
-                    <option value="feeling">2</option>
-                    <option value="feeling">1</option>
+                    <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                 </select>
                 
                 <button className="nextBtn" type="submit">NEXT</button>

@@ -12,8 +12,14 @@ import logger from 'redux-logger';
 // reducers
 const feedbackReducer = (state = {}, action) => {
     switch (action.type) {
-        case 'SET_FEEDBACK':
-            return action.payload;
+        case 'SET_FEELING':
+            return { ...state, feeling: action.payload };
+        case 'SET_UNDERSTANDING':
+            return { ...state, understanding: action.payload };
+        case 'SET_SUPPORT':
+            return { ...state, support: action.payload };
+            case 'SET_COMMENTS':
+                return { ...state, comments: action.payload } ;
         default:
             return state;
     }

@@ -15,8 +15,8 @@ function CommentForm() {
         console.log('in handleComment');
 
         dispatch({
-            type: 'SET_FEEDBACK',
-            payload: {comments: comments}
+            type: 'SET_COMMENTS',
+            payload: comments
         });
 
         history.push('/review');

@@ -16,7 +16,7 @@ function UnderstandingForm() {
 
         dispatch({
             type: 'SET_FEEDBACK',
-            payload: {understanding: understanding}
+            payload: understanding
         });
 
         history.push('/supported');
@@ -27,11 +27,11 @@ function UnderstandingForm() {
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={handleUnderstanding}>
                 <select className="selectOpt" onChange={(event) => setUnderstanding(event.target.value)}>
-                    <option value="understanding">5</option>
-                    <option value="understanding">4</option>
-                    <option value="understanding">3</option>
-                    <option value="understanding">2</option>
-                    <option value="understanding">1</option>
+                <option value="5">5</option>
+                    <option value="4">4</option>
+                    <option value="3">3</option>
+                    <option value="2">2</option>
+                    <option value="1">1</option>
                 </select>
                 <button className="nextBtn" type="submit">NEXT</button>
             </form>

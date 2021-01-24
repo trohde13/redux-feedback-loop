@@ -20,7 +20,7 @@ function CommentForm() {
         });
 
         history.push('/review');
-    }
+    }; //end handleComment
 
     return (
         <div>

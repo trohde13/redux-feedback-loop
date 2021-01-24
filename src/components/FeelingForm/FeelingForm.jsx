@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import Select from 'react-select';
+
 
 function FeelingForm() {
 
@@ -22,14 +22,18 @@ function FeelingForm() {
         event.preventDefault();
 
         console.log('in handleFeeling', {feeling} );
-
-        dispatch({
-            type: 'SET_FEELING',
-            payload: feeling
+        if(feeling === ''){
+            alert('Please select a number from the list')
+            return false;
+        } else {
+            dispatch({
+                type: 'SET_FEELING',
+                payload: feeling
         });
 
         history.push('/understanding');
-    }
+        }
+    }; //end handleFeeling
 
     return (
         <div>
@@ -37,6 +41,7 @@ function FeelingForm() {
             <form onSubmit={handleFeeling}>
                 
                 <select className="selectOpt" onChange={(event) => setFeeling(event.target.value)}>
+                    <option value="0">Please Select</option>
                     <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>

@@ -18,18 +18,7 @@ function App() {
           <h1 className='App-title'>Feedback!</h1>
           <h4>Don't forget it!</h4>
         </header>
-        <div>
-        <nav className="navBox">
-            <ul>
-              <li><Link to="/">Feeling</Link></li>
-              <li><Link to="/understanding">Understanding</Link></li>
-              <li><Link to="/supported">Supported</Link></li>
-              <li><Link to="/comment">Comment</Link></li>
-              <li><Link to="/review">Review</Link></li>
-              <li><Link to="/success">Success</Link></li>
-            </ul>
-          </nav>
-        </div>
+        
         <Route path="/" exact component={FeelingForm} />
         <Route path="/understanding" component={UnderstandingForm} />
         <Route path="/supported" component={SupportedForm} />

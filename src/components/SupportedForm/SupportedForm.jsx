@@ -13,21 +13,26 @@ function SupportedForm() {
         event.preventDefault();
 
         console.log('in handleSupported');
-
-        dispatch({
-            type: 'SET_SUPPORT',
-            payload: support
+        if(support === ''){
+            alert('Please select a number from the list')
+            return false;
+        } else {
+            dispatch({
+                type: 'SET_SUPPORT',
+                payload: support
         });
 
         history.push('/comment');
-    }
+        }
+    }; //end handleSupported
 
     return (
         <div>
             <h2>How well are you being supported?</h2>
             <form onSubmit={handleSupported}>
                 <select className="selectOpt" onChange={(event) => setSupport(event.target.value)}>
-                <option value="5">5</option>
+                    <option value="0">Please Select</option>
+                    <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>
                     <option value="2">2</option>

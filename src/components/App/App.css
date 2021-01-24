@@ -3,7 +3,8 @@
 }
 
 .App-header {
-  background-color: #033076;
+  background: rgb(6,63,154);
+  background: radial-gradient(circle, rgba(6,63,154,1) 14%, rgba(155,11,207,1) 97%);
   min-height: 70px;
   padding: 20px;
   color: white;
@@ -26,22 +27,70 @@ h4 {
   width: 200px;
   height: 25px;
   margin: 10px;
-
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .commentInput {
   width: 400px;
   height: 25px;
   margin: 10px;
-
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 
 .nextBtn {
+  cursor: pointer;
   width: 75px;
   height: 25px;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 3px 6px #291528;
 }
 
 .confirmBtn {
+  cursor: pointer;
   height: 25px;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 3px 6px #291528;
 
+}
+
+.reviewMsg {
+  display: inline-block;
+  border-style: double;
+  margin: 5px;
+  padding: 5px;
+  height: 250px;
+  width: 220px;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 10px #291528;
+}
+
+.successMsg {
+  display: inline-block;
+  border-style: double;
+  margin: 5px;
+  padding: 5px;
+  height: 250px;
+  width: 220px;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 4px 10px #291528;
+}
+
+.returnBtn {
+  cursor: pointer;
+  border-radius: 3px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+  box-shadow: 0 3px 6px #291528;
 }

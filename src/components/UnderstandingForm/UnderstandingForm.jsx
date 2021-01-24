@@ -13,21 +13,26 @@ function UnderstandingForm() {
         event.preventDefault();
 
         console.log('in handleUnderstanding');
-
-        dispatch({
-            type: 'SET_UNDERSTANDING',
-            payload: understanding
+        if(understanding === ''){
+            alert('Please select a number from the list')
+            return false;
+        } else {
+            dispatch({
+                type: 'SET_UNDERSTANDING',
+                payload: understanding
         });
 
         history.push('/supported');
-    }
+        }
+    }; //end handleUnderstanding
 
     return (
         <div>
             <h2>How well are you understanding the content?</h2>
             <form onSubmit={handleUnderstanding}>
                 <select className="selectOpt" onChange={(event) => setUnderstanding(event.target.value)}>
-                <option value="5">5</option>
+                    <option value="0">Please Select</option>
+                    <option value="5">5</option>
                     <option value="4">4</option>
                     <option value="3">3</option>
                     <option value="2">2</option>

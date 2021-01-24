@@ -1,9 +1,3 @@
-import FeelingForm from '../FeelingForm/FeelingForm';
-import UnderstandingForm from '../UnderstandingForm/UnderstandingForm';
-import SupportedForm from '../SupportedForm/SupportedForm';
-import CommentForm from '../CommentForm/CommentForm';
-
-
 import {useSelector} from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import axios from 'axios';
@@ -30,15 +24,15 @@ function ReviewPage() {
     return (
         <div>
             <h2>REVIEW YOUR FEEDBACK:</h2>
-            <div>
+            <div className="reviewMsg">
                 
                 <p>Feelings: { feedbackReducer.feeling }</p>
                 <p>Conceptual Understanding: { feedbackReducer.understanding }</p>
                 <p>Support: { feedbackReducer.support }</p>
                 <p>{ feedbackReducer.comments }</p>
-                
+                <button className="confirmBtn" onClick={handleSubmit}>CONFIRM FEEDBACK</button>
             </div>
-            <button className="confirmBtn" onClick={handleSubmit}>CONFIRM FEEDBACK</button>
+            
         </div>
     )
 };

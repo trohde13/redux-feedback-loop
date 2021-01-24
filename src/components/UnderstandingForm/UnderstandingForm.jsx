@@ -15,7 +15,7 @@ function UnderstandingForm() {
         console.log('in handleUnderstanding');
 
         dispatch({
-            type: 'SET_FEEDBACK',
+            type: 'SET_UNDERSTANDING',
             payload: understanding
         });
 
